@@ -1,0 +1,5 @@
+NTClient: \NT\API\Brokers\Client
+NTClientAsync: \NT\API\Brokers\ClientAsync
+User: \MyProject\Brokers\User
+TSConnect: \NT\TSConnect\Brokers\Client
+TSConnectAsync: \NT\TSConnect\Brokers\ClientAsync

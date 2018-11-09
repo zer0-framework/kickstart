@@ -1,0 +1,19 @@
+{
+  "css": [
+    {
+      "src": "dist/main.bundle.css",
+      "dest": "dist/main.bundle-with-sprites.css",
+      "inline": true
+    }
+  ],
+  "sprites": [
+    {
+      "layout": "top-down",
+      "src": [
+        "public/pic"
+      ],
+      "dest": "dist/bundle.png",
+      "relative": "."
+    }
+  ]
+}

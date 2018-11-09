@@ -1,0 +1,14 @@
+queue:
+  controller: \Zer0\Cli\Controllers\Queue
+
+filestorage:
+    controller: \Zer0\Cli\Controllers\FileStorage
+
+build:
+  controller: \Zer0\Cli\Controllers\Build
+
+config:
+  controller: \Zer0\Cli\Controllers\Config
+
+_:
+  controller: \Zer0\Cli\Controllers\Index

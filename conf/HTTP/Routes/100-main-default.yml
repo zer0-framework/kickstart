@@ -1,0 +1,8 @@
+user:
+  path: /user/{action}
+  defaults: {
+    controller: User
+  }
+  methods: [GET, POST]
+  export: [JS]
+

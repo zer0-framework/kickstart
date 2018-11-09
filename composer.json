@@ -1,0 +1,133 @@
+{
+    "require": {
+        "Zer0-Framework/Zer0": "dev-master",
+        "Zer0-Framework/Config": "dev-master",
+        "Zer0-Framework/FileStorage": "dev-master",
+        "Zer0-Framework/FastCGI": "dev-master",
+        "Zer0-Framework/Cli": "dev-master",
+        "Zer0-Framework/HTTP": "dev-master",
+        "Zer0-Framework/HTMLPurifier": "dev-master",
+        "Zer0-Framework/PDO": "dev-master",
+        "Zer0-Framework/Redis": "dev-master",
+        "Zer0-Framework/Model": "dev-master",
+        "Zer0-Framework/PubSub": "dev-master",
+        "Zer0-Framework/Queue": "dev-master",
+        "Zer0-Framework/Quicky": "dev-master",
+        "Zer0-Framework/Cache": "dev-master",
+        "Zer0-Framework/Socket": "dev-master",
+        "Zer0-Framework/Session": "dev-master",
+        "Zer0-Framework/Security": "dev-master",
+        "Zer0-Framework/Mailer": "dev-master",
+        "Zer0-Framework/Helpers": "dev-master",
+        "Zer0-Framework/Tracy": "dev-master",
+        "tracy/tracy": "dev-master",
+        "jandrabek/tracy-gitversion-panel": "dev-master",
+        "netpromotion/profiler": "dev-master",
+        "neitanod/forceutf8": "^2.0"
+    },
+    "suggest": {
+    },
+    "autoload": {
+        "classmap": ["src/","libraries/"]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zer0-Framework/Zer0"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zer0-Framework/FileStorage"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zer0-Framework/FastCGI"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zer0-Framework/Config"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zer0-Framework/Cli"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zer0-Framework/HTTP"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zer0-Framework/PDO"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zer0-Framework/Redis"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zer0-Framework/Model"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zer0-Framework/PubSub"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zer0-Framework/Queue"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zer0-Framework/Cache"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zer0-Framework/Socket"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zer0-Framework/Session"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zer0-Framework/HTMLPurifier"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zer0-Framework/Security"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zer0-Framework/Mailer"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zer0-Framework/Quicky"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zer0-Framework/Tracy"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zer0-Framework/Helpers"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/kakserpom/tracy"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/kakserpom/profiler"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/kakserpom/tracy-gitversion-panel"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/kakserpom/Console"
+        }
+    ]
+}

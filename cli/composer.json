@@ -1,0 +1,19 @@
+{
+    "require": {
+        "robmorgan/phinx": "^0.10.6",
+        "phpunit/phpunit": "^7.3",
+        "friendsofphp/php-cs-fixer": "^2.13",
+        "liuggio/fastest": "^1.6"
+    },
+    "replace": {
+        "symfony/polyfill-ctype": "*",
+        "symfony/polyfill-mbstring": "*",
+        "symfony/polyfill-php70": "*",
+        "symfony/polyfill-php72": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "vimeo/psalm": "^2.0"
+    }
+}

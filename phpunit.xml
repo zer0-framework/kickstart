@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<phpunit bootstrap="./vendor/Zer0-Framework/Zer0/src/bootstrap.php">
+
+    <testsuites>
+        <testsuite name="Application tests">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

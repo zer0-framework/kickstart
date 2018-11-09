@@ -1,0 +1,4 @@
+socket:
+  path: /socket/
+  type: websocket
+  backend: "unix:/var/run/sockjs.sock"

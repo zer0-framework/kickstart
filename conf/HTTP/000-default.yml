@@ -1,0 +1,6 @@
+default_controller_ns: "MyProject\\HTTP\\Controllers"
+nginx_folder: "/var/www/myproject/nginx"
+server_name: "myproject"
+
+route_errors:
+  any: {controller: "Error"}

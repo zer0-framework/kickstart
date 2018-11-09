@@ -1,0 +1,16 @@
+.*
+!.gitignore
+!.bash_profile
+*.lock
+*.log
+nginx/*.usr.conf
+nginx/server.conf
+vendor
+templates_c
+nginx/routes.conf
+usr
+node_modules
+bower_components
+dist
+public/js/Routes.cfg.js
+!public/js/iguanacharts/dist

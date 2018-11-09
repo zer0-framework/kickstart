@@ -1,0 +1,5 @@
+mode: 'auth'
+secret: changeme
+panels:
+  - \JanDrabek\Tracy\GitVersionPanel
+  - \Netpromotion\Profiler\Adapter\TracyBarAdapter

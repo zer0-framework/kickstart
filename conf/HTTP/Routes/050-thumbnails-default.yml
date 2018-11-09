@@ -1,0 +1,10 @@
+thumbnails:
+  path: /thumbnails/{format}/{path}
+  path_export: https://XXXX.selcdn.ru/thumbnails/{format}/{path}
+  format: {
+      path: ".+"
+  }
+  defaults: {
+    controller: "\\Zer0\\HTTP\\Controllers\\Thumbnails"
+  }
+  methods: [GET]

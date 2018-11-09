@@ -1,0 +1,7 @@
+route: socket
+
+services:
+  - Notifications
+  - PubSub
+
+socketClass: "\\MyProject\\Socket\\Socket"
