@@ -1,6 +1,9 @@
 queue:
   controller: \Zer0\Cli\Controllers\Queue
 
+cache:
+  controller: \Zer0\Cli\Controllers\Cache
+
 filestorage:
     controller: \Zer0\Cli\Controllers\FileStorage
 
