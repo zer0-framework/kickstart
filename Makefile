@@ -33,7 +33,7 @@ packages-yarn:
 routes:
 	echo $(ENV) > .env
 	./vendor/bin/cli build all
-	service nginx reload
+	sudo service nginx reload
 
 build:
 	@@echo '------------------------------------------------'
