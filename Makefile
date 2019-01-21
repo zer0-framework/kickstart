@@ -32,7 +32,8 @@ packages-yarn:
 
 routes:
 	echo $(ENV) > .env
-	./vendor/bin/cli build all
+	./vendor/bin/cli i18n build
+	./vendor/bin/cli http build-all
 	sudo service nginx reload
 
 build:
