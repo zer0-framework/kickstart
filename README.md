@@ -37,7 +37,7 @@ sudo npm install -g uglifyify
 Сценарий построен с использованием на GNU Make 4+ (он же `make`).
  
 ### Этапы
-* all: `packages fmt routes build test`
+* all: `packages fmt build test`
 * fmt
     * fmt-php — отформатировать PHP-код
     * fmt-js — отформатировать код Javascript
@@ -45,8 +45,9 @@ sudo npm install -g uglifyify
 * packages
     * packages-composer — установка пакетов через composer (composer.json)
     * packages-yarn — установка пакетов через yarn (packages.json)
-* routes — генерация конфигурационного файла Nginx и файла Routes.cfg.js
-* build — запустить сборку бандлов с помощью npm в зависимости от ENV.
+* build
+    * build-backend — генерация конфигурационного файла Nginx и файла Routes.cfg.js
+    * build-frontend — запустить сборку бандлов с помощью npm в зависимости от ENV.
 * migrate — накатить миграции
 * test — выполнить тесты 
 * clean — удалить все созданные в процессе сборки файлы/папки
