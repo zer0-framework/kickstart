@@ -19,7 +19,7 @@
 {if $tracy}{?$tracy->renderBar()}{/if}
 </div>
 {if !$isPjax}
-{include file="layouts/main/partials/footer.tpl"}
+<!-- footer -->
 {/if}
 <!-- Generated in {round(microtime(true) - $quicky.server.REQUEST_TIME_FLOAT, 5)} sec. -->
 </body>
