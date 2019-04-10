@@ -1,11 +1,17 @@
 {
   "dependencies": {
+    "bootstrap": "^4.3.1",
+    "common-shakeify": "^0.6.0",
+    "jquery": "^3.3.1",
+    "lessify": "^1.0.2",
+    "locutus": "^2.0.10",
+    "popper.js": "^1.15.0"
   },
   "devDependencies": {
     "aliasify": "^2.1.0",
     "browser-sync": "^2.24.4",
     "browserify": "latest",
-    "browserify-css": "latest",
+    "browserify-css": "^0.14.0",
     "chalk": "^2.4.1",
     "del": "^3.0.0",
     "jshint": "^2.9.5",
@@ -24,12 +30,12 @@
     "aliases": {}
   },
   "scripts": {
-    "bundle": "npm run browserify; npm run bundle-minify-js",
+    "bundle": "npm run browserify",
     "bundle-dev": "npm run browserify-dev",
     "bundle-minify-js": "minifyjs -m -i dist/$BUNDLE.bundle.js -o dist/$BUNDLE.bundle.min.js",
-    "browserify": "browserify -t [ browserify-css --minify=true --output dist/$BUNDLE.bundle.min.css ] -g uglifyify -g aliasify public/js/$BUNDLE.js -o dist/$BUNDLE.bundle.js --debug",
-    "browserify-dev": "browserify -t [ browserify-css --output dist/$BUNDLE.bundle.css ] -g aliasify public/js/$BUNDLE.js -o dist/$BUNDLE.bundle.js --debug",
-    "watch": "watchify -t [ browserify-css --output dist/$BUNDLE.bundle.css ] -g aliasify public/js/$BUNDLE.js -o dist/$BUNDLE.bundle.js -v --debug",
+    "browserify": "browserify -p common-shakeify -t [ browserify-css --minify=true --output dist/$BUNDLE.bundle.min.css ] -t lessify -g uglifyify -g aliasify public/js/$BUNDLE.js -o dist/$BUNDLE.bundle.min.js",
+    "browserify-dev": "browserify -p common-shakeify -t [ browserify-css --output dist/$BUNDLE.bundle.css ] -t lessify -g aliasify public/js/$BUNDLE.js -o dist/$BUNDLE.bundle.js --debug",
+    "watch": "watchify -p common-shakeify -t [ browserify-css --output dist/$BUNDLE.bundle.css ] -t lessify -g aliasify public/js/$BUNDLE.js -o dist/$BUNDLE.bundle.js -v --debug --poll",
     "spritify": "spritify -c spritify.json",
     "prepare": "patch-package"
   },

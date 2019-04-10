@@ -5,12 +5,11 @@ ifeq ($(filter $(ENV),$(LIST_ENV)),)
 $(error Empty/wrong ENV. List of allowed values: $(LIST_ENV))
 endif
 
-all: packages fmt build test restart-services
+all: packages fmt build restart-services
 fmt: fmt-php fmt-js fmt-css
 fmt-php:
 ifeq ($(ENV), dev)
 	./cli/vendor/bin/php-cs-fixer fix src
-	./cli/vendor/bin/php-cs-fixer fix libraries
 endif
 
 fmt-js:
@@ -44,15 +43,15 @@ build-frontend:
 	@@echo '------------------------------------------------'
 	echo $(ENV) > .env
 
-	mkdir -p dist migrations templates_c
-	rm -f templates_c/*
+	mkdir -p dist migrations compiled/templates_c
+	rm -f compiled/templates_c/*
 
 ifeq ($(ENV), dev)
 	BUNDLE=main npm run bundle-dev
-	BUNDLE=admin npm run bundle-dev
+	#BUNDLE=admin npm run bundle-dev
 else
 	BUNDLE=main npm run bundle
-	BUNDLE=admin npm run bundle
+	#BUNDLE=admin npm run bundle
 endif
 	date +%s > .build-timestamp
 
@@ -66,8 +65,8 @@ dry-migrate:
 	./cli/vendor/bin/phinx migrate --dry-run
 
 restart-services:
-	vendor/bin/sockjs-server restart
-	vendor/bin/queue-worker restart
+	sudo vendor/bin/sockjs-server restart
+	sudo vendor/bin/queue-worker restart
 
 clean:
-	rm -rf dist node_modules vendor templates_c
+	rm -rf dist node_modules vendor compiled
