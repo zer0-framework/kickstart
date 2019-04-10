@@ -1,3 +1,3 @@
 template_dir: "src/MyProject/HTTP/Views/"
-compile_dir: "templates_c/"
+compile_dir: "compiled/templates_c/"
 compiler_prefs.auto_escape: true
