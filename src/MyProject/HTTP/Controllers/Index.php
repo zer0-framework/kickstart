@@ -12,6 +12,6 @@ final class Index extends AbstractController
      */
     public function indexAction(): Template
     {
-        return new Template('pages/Index/index.tpl');
+        return new Template('index.tpl');
     }
 }

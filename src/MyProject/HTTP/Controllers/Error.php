@@ -43,7 +43,7 @@ final class Error extends AbstractController
                 ] : null,
             ]);
         } else {
-            return new Template('pages/Error/' . $code . '.tpl');
+            return new Template('errors/' . $code . '.tpl');
         }
     }
 }
