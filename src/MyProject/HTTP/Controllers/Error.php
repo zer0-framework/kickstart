@@ -7,8 +7,9 @@ use Zer0\HTTP\Exceptions\MovedTemporarily;
 use Zer0\HTTP\Responses\Base as BaseResponse;
 use Zer0\HTTP\Responses\JSON;
 use Zer0\HTTP\Responses\Template;
+use Zer0\HTTP\AbstractController;
 
-final class Error extends Base
+final class Error extends AbstractController
 {
     /**
      * @var bool
