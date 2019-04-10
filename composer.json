@@ -6,6 +6,7 @@
         "Zer0-Framework/FastCGI": "dev-master",
         "Zer0-Framework/Cli": "dev-master",
         "Zer0-Framework/HTTP": "dev-master",
+        "Zer0-Framework/i18n": "dev-master",
         "Zer0-Framework/HTMLPurifier": "dev-master",
         "Zer0-Framework/PDO": "dev-master",
         "Zer0-Framework/Redis": "dev-master",
@@ -80,6 +81,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/Zer0-Framework/Cache"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Zer0-Framework/i18n"
         },
         {
             "type": "vcs",
