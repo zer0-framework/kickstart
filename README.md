@@ -8,9 +8,11 @@
 sudo add-apt-repository ppa:ondrej/php
 sudo apt install nginx php7.3-fpm php7.3-opcache php7.3-xml php7.3-cli php7.3-yaml php7.3-mbstring php7.3-dev libevent-dev composer make pkg-config php7.3-curl php7.3-pgsql
 sudo apt install php-pear 
-sudo pecl install event 
+sudo pecl install event igbinary
 echo 'extension=event.so' | sudo tee -a /etc/php/7.3/cli/conf.d/20-event.ini
 echo "extension=event.so" | sudo tee -a /etc/php/7.3/fpm/conf.d/20-event.ini
+echo 'extension=igbinary.so' | sudo tee -a /etc/php/7.3/cli/conf.d/20-igbinary.ini
+echo "extension=igbinary.so" | sudo tee -a /etc/php/7.3/fpm/conf.d/20-igbinary.ini
 ```
 
 Установим NPM и Yarn:
@@ -35,7 +37,7 @@ sudo npm install -g uglifyify
 Сценарий построен с использованием на GNU Make 4+ (он же `make`).
  
 ### Этапы
-* all: `packages fmt routes build test`
+* all: `packages fmt build test`
 * fmt
     * fmt-php — отформатировать PHP-код
     * fmt-js — отформатировать код Javascript
@@ -43,8 +45,9 @@ sudo npm install -g uglifyify
 * packages
     * packages-composer — установка пакетов через composer (composer.json)
     * packages-yarn — установка пакетов через yarn (packages.json)
-* routes — генерация конфигурационного файла Nginx и файла Routes.cfg.js
-* build — запустить сборку бандлов с помощью npm в зависимости от ENV.
+* build
+    * build-backend — генерация конфигурационного файла Nginx и файла Routes.cfg.js
+    * build-frontend — запустить сборку бандлов с помощью npm в зависимости от ENV.
 * migrate — накатить миграции
 * test — выполнить тесты 
 * clean — удалить все созданные в процессе сборки файлы/папки

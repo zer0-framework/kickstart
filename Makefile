@@ -5,7 +5,7 @@ ifeq ($(filter $(ENV),$(LIST_ENV)),)
 $(error Empty/wrong ENV. List of allowed values: $(LIST_ENV))
 endif
 
-all: packages fmt routes build test restart-services
+all: packages fmt build test restart-services
 fmt: fmt-php fmt-js fmt-css
 fmt-php:
 ifeq ($(ENV), dev)
@@ -30,13 +30,15 @@ packages-composer:
 packages-yarn:
 	yarn --dev
 
-routes:
+build: build-backend build-frontend
+
+build-backend:
 	echo $(ENV) > .env
 	./vendor/bin/cli i18n build
 	./vendor/bin/cli http build-all
 	sudo service nginx reload
 
-build:
+build-frontend:
 	@@echo '------------------------------------------------'
 	@@echo ENV = $(ENV)
 	@@echo '------------------------------------------------'
