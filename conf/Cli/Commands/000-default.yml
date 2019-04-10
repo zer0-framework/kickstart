@@ -1,6 +1,12 @@
 queue:
   controller: \Zer0\Cli\Controllers\Queue
 
+http:
+  controller: \Zer0\Cli\Controllers\HTTP
+
+i18n:
+  controller: \Zer0\Cli\Controllers\I18n
+
 cache:
   controller: \Zer0\Cli\Controllers\Cache
 
