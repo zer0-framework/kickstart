@@ -5,9 +5,9 @@
 
 В Ubuntu их можно разом установить так:
 ```
+sudo apt-get install -y software-properties-common
 sudo add-apt-repository ppa:ondrej/php
-sudo apt install nginx php7.3-fpm php7.3-opcache php7.3-xml php7.3-cli php7.3-yaml php7.3-mbstring php7.3-dev libevent-dev composer make pkg-config php7.3-curl php7.3-pgsql
-sudo apt install php-pear 
+sudo apt install -y nginx php7.3-fpm php7.3-opcache php7.3-xml php7.3-cli php7.3-yaml php7.3-mbstring php7.3-dev libevent-dev composer make pkg-config php7.3-curl php7.3-pgsql php-pear
 sudo pecl install event igbinary
 echo 'extension=event.so' | sudo tee -a /etc/php/7.3/cli/conf.d/20-event.ini
 echo "extension=event.so" | sudo tee -a /etc/php/7.3/fpm/conf.d/20-event.ini
