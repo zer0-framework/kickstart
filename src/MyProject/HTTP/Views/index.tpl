@@ -4,8 +4,8 @@
     {block Meta_Keywords}Keywords {/block}
     {block content}
 
-
-Hello world!
+ <h1 class="mt-5">Hello world!</h1>
+      <p class="lead">Lorem ipsum</p>
 
 {/block}
 

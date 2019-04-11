@@ -23,12 +23,11 @@
     {/if}
 </head>
 
-  <body>
-<div id="pjax-container">
+  <body id="pjax-container">
     <header>
       <!-- Fixed navbar -->
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Fixed navbar</a>
+        <a class="navbar-brand" href="{__ url('root')}">My Project</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -51,12 +50,10 @@
         </div>
       </nav>
     </header>
-{block content}{/block}
+
     <!-- Begin page content -->
     <main role="main" class="container">
-      <h1 class="mt-5">Sticky footer with fixed navbar</h1>
-      <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body &gt; .container</code>.</p>
-      <p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
+      {block content}{/block}
     </main>
 
     <footer class="footer">
@@ -66,7 +63,7 @@
     </footer>
 
 {if $tracy}{?$tracy->renderBar()}{/if}
-</div>
+
 {if !$isPjax}
 <!-- footer -->
 {/if}
