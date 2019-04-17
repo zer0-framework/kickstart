@@ -1,6 +1,9 @@
-.PHONY: all fmt fmt-php fmt-js fmt-css packages routes build backend frontend devtools-dump migrate test restart-services clean
+#!make
+include .env
+export
+
+.PHONY: all fmt fmt-php fmt-js fmt-css packages routes i18n build backend frontend devtools-dump migrate test restart-services clean
 LIST_ENV = dev prod
-ENV = $(shell cat .env 2>/dev/null)
 ifeq ($(filter $(ENV),$(LIST_ENV)),)
 $(error Empty/wrong ENV. List of allowed values: $(LIST_ENV))
 endif
@@ -32,7 +35,6 @@ packages-yarn:
 backend: i18n routes devtools-dump
 
 i18n:
-	echo $(ENV) > .env
 	./vendor/bin/cli i18n build
 
 routes:
@@ -43,11 +45,6 @@ devtools-dump:
 	./vendor/bin/cli devtools dump
 
 frontend:
-	@@echo '------------------------------------------------'
-	@@echo ENV = $(ENV)
-	@@echo '------------------------------------------------'
-	echo $(ENV) > .env
-
 	mkdir -p dist migrations compiled/templates_c
 	rm -f compiled/templates_c/*
 
@@ -58,7 +55,7 @@ else
 	BUNDLE=main npm run bundle
 	#BUNDLE=admin npm run bundle
 endif
-	date +%s > .build-timestamp
+	echo "BUILD_TS=$(shell date +%s)" > .env.build
 
 test:
 	./cli/vendor/bin/fastest -x phpunit.xml "./cli/vendor/bin/phpunit {};"
