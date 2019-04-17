@@ -13,8 +13,8 @@ cache:
 filestorage:
     controller: \Zer0\Cli\Controllers\FileStorage
 
-build:
-  controller: \Zer0\Cli\Controllers\Build
+devtools:
+  controller: \Zer0\Cli\Controllers\Devtools
 
 config:
   controller: \Zer0\Cli\Controllers\Config

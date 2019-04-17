@@ -1,4 +1,4 @@
-.PHONY: all fmt fmt-php fmt-js fmt-css packages routes build migrate test restart-services clean
+.PHONY: all fmt fmt-php fmt-js fmt-css packages routes build backend frontend devtools-dump migrate test restart-services clean
 LIST_ENV = dev prod
 ENV = $(shell cat .env 2>/dev/null)
 ifeq ($(filter $(ENV),$(LIST_ENV)),)
@@ -29,15 +29,20 @@ packages-composer:
 packages-yarn:
 	yarn --dev
 
-build: build-backend build-frontend
+backend: i18n routes devtools-dump
 
-build-backend:
+i18n:
 	echo $(ENV) > .env
 	./vendor/bin/cli i18n build
-	./vendor/bin/cli http build-all
-	sudo service nginx reload
 
-build-frontend:
+routes:
+	./vendor/bin/cli http build-all
+
+devtools-dump:
+	composer du
+	./vendor/bin/cli devtools dump
+
+frontend:
 	@@echo '------------------------------------------------'
 	@@echo ENV = $(ENV)
 	@@echo '------------------------------------------------'
