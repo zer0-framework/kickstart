@@ -1,6 +1,6 @@
 <?php
 define('ZERO_ROOT', __DIR__);
-require 'vendor/Zer0-Framework/Zer0/src/bootstrap.php';
+require 'vendor/zer0-framework/core/src/bootstrap.php';
 /**
  * @var $broker \Zer0\Brokers\PDO
  */

@@ -1,26 +1,26 @@
 {
     "require": {
-        "Zer0-Framework/Zer0": "dev-master",
-        "Zer0-Framework/Config": "dev-master",
-        "Zer0-Framework/FileStorage": "dev-master",
-        "Zer0-Framework/FastCGI": "dev-master",
-        "Zer0-Framework/Cli": "dev-master",
-        "Zer0-Framework/HTTP": "dev-master",
-        "Zer0-Framework/i18n": "dev-master",
-        "Zer0-Framework/HTMLPurifier": "dev-master",
-        "Zer0-Framework/PDO": "dev-master",
-        "Zer0-Framework/Redis": "dev-master",
-        "Zer0-Framework/Model": "dev-master",
-        "Zer0-Framework/PubSub": "dev-master",
-        "Zer0-Framework/Queue": "dev-master",
-        "Zer0-Framework/Quicky": "dev-master",
-        "Zer0-Framework/Cache": "dev-master",
-        "Zer0-Framework/Socket": "dev-master",
-        "Zer0-Framework/Session": "dev-master",
-        "Zer0-Framework/Security": "dev-master",
-        "Zer0-Framework/Mailer": "dev-master",
-        "Zer0-Framework/Helpers": "dev-master",
-        "Zer0-Framework/Tracy": "dev-master",
+        "zer0-framework/core": "dev-master",
+        "zer0-framework/config": "dev-master",
+        "zer0-framework/file-storage": "dev-master",
+        "zer0-framework/fastcgi": "dev-master",
+        "zer0-framework/cli": "dev-master",
+        "zer0-framework/http": "dev-master",
+        "zer0-framework/i18n": "dev-master",
+        "zer0-framework/html-purifier": "dev-master",
+        "zer0-framework/pdo": "dev-master",
+        "zer0-framework/redis": "dev-master",
+        "zer0-framework/model": "dev-master",
+        "zer0-framework/pubsub": "dev-master",
+        "zer0-framework/queue": "dev-master",
+        "zer0-framework/quicky": "dev-master",
+        "zer0-framework/cache": "dev-master",
+        "zer0-framework/socket": "dev-master",
+        "zer0-framework/session": "dev-master",
+        "zer0-framework/security": "dev-master",
+        "zer0-framework/mailer": "dev-master",
+        "zer0-framework/helpers": "dev-master",
+        "zer0-framework/tracy": "dev-master",
         "tracy/tracy": "dev-master",
         "jandrabek/tracy-gitversion-panel": "dev-master",
         "netpromotion/profiler": "dev-master",
@@ -36,87 +36,87 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/Zer0-Framework/Zer0"
+            "url": "https://github.com/zer0-framework/core"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/Zer0-Framework/FileStorage"
+            "url": "https://github.com/zer0-framework/file-storage"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/Zer0-Framework/FastCGI"
+            "url": "https://github.com/zer0-framework/fastcgi"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/Zer0-Framework/Config"
+            "url": "https://github.com/zer0-framework/config"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/Zer0-Framework/Cli"
+            "url": "https://github.com/zer0-framework/cli"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/Zer0-Framework/HTTP"
+            "url": "https://github.com/zer0-framework/http"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/Zer0-Framework/PDO"
+            "url": "https://github.com/zer0-framework/pdo"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/Zer0-Framework/Redis"
+            "url": "https://github.com/zer0-framework/redis"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/Zer0-Framework/Model"
+            "url": "https://github.com/zer0-framework/model"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/Zer0-Framework/PubSub"
+            "url": "https://github.com/zer0-framework/pubsub"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/Zer0-Framework/Queue"
+            "url": "https://github.com/zer0-framework/queue"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/Zer0-Framework/Cache"
+            "url": "https://github.com/zer0-framework/cache"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/Zer0-Framework/i18n"
+            "url": "https://github.com/zer0-framework/i18n"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/Zer0-Framework/Socket"
+            "url": "https://github.com/zer0-framework/socket"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/Zer0-Framework/Session"
+            "url": "https://github.com/zer0-framework/session"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/Zer0-Framework/HTMLPurifier"
+            "url": "https://github.com/zer0-framework/html-purifier"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/Zer0-Framework/Security"
+            "url": "https://github.com/zer0-framework/security"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/Zer0-Framework/Mailer"
+            "url": "https://github.com/zer0-framework/mailer"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/Zer0-Framework/Quicky"
+            "url": "https://github.com/zer0-framework/quicky"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/Zer0-Framework/Tracy"
+            "url": "https://github.com/zer0-framework/tracy"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/Zer0-Framework/Helpers"
+            "url": "https://github.com/zer0-framework/helpers"
         },
         {
             "type": "vcs",
@@ -129,10 +129,6 @@
         {
             "type": "vcs",
             "url": "https://github.com/kakserpom/tracy-gitversion-panel"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/kakserpom/Console"
         }
     ]
 }
