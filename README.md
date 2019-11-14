@@ -7,12 +7,12 @@
 ```
 sudo apt-get install -y software-properties-common
 sudo add-apt-repository ppa:ondrej/php
-sudo apt install -y nginx php7.3-fpm php7.3-opcache php7.3-xml php7.3-cli php7.3-yaml php7.3-mbstring php7.3-dev libevent-dev composer make pkg-config php7.3-curl php7.3-pgsql php-pear
+sudo apt install -y nginx php7.4-fpm php7.4-opcache php7.4-xml php7.4-cli php7.4-yaml php7.4-mbstring php7.4-dev libevent-dev composer make pkg-config php7.4-curl php7.4-pgsql php-pear
 sudo pecl install event igbinary
-echo 'extension=event.so' | sudo tee -a /etc/php/7.3/cli/conf.d/20-event.ini
-echo "extension=event.so" | sudo tee -a /etc/php/7.3/fpm/conf.d/20-event.ini
-echo 'extension=igbinary.so' | sudo tee -a /etc/php/7.3/cli/conf.d/20-igbinary.ini
-echo "extension=igbinary.so" | sudo tee -a /etc/php/7.3/fpm/conf.d/20-igbinary.ini
+echo 'extension=event.so' | sudo tee -a /etc/php/7.4/cli/conf.d/20-event.ini
+echo "extension=event.so" | sudo tee -a /etc/php/7.4/fpm/conf.d/20-event.ini
+echo 'extension=eio.so' | sudo tee -a /etc/php/7.4/cli/conf.d/20-eio.ini
+echo "extension=eio.so" | sudo tee -a /etc/php/7.4/fpm/conf.d/20-eio.ini
 ```
 
 Установим NPM и Yarn:
