@@ -8,7 +8,7 @@
 sudo apt-get install -y software-properties-common
 sudo add-apt-repository ppa:ondrej/php
 sudo apt install -y nginx php7.4-fpm php7.4-opcache php7.4-xml php7.4-cli php7.4-yaml php7.4-mbstring php7.4-dev libevent-dev composer make pkg-config php7.4-curl php7.4-pgsql php-pear
-sudo pecl install event igbinary
+sudo pecl install event eio
 echo 'extension=event.so' | sudo tee -a /etc/php/7.4/cli/conf.d/20-event.ini
 echo "extension=event.so" | sudo tee -a /etc/php/7.4/fpm/conf.d/20-event.ini
 echo 'extension=eio.so' | sudo tee -a /etc/php/7.4/cli/conf.d/20-eio.ini
